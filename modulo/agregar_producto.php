@@ -23,7 +23,7 @@ check_admin();
  		$descargable = rand(0,1000).$_FILES['descargable']['name'];
  		move_uploaded_file($_FILES['descargable']['tmp_name'], "./descargable/".$descargable);
  	}
- 	mysqli_query($mysqli, "INSERT INTO productos (name,precio,imagen,id_categoria,oferta) VALUES ('$name','$precio','$imagen','$categoria','$oferta')");
+ 	mysqli_query($mysqli, "INSERT INTO productos (name,precio,imagen,id_categoria,oferta,descargable) VALUES ('$name','$precio','$imagen','$categoria','$oferta')");
  	alert("Producto agregado exitosamente");
  	// redir("?p=agregar_producto");
  }
