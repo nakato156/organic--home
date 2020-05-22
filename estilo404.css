@@ -1,0 +1,41 @@
+body{
+	margin: 0;
+	min-height: 100vh;
+	background-image: url(404/404not.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.img{
+	background: transparent;
+	margin: 0px;
+	height: 463px;
+	width: 1300px;
+}
+.cabecera{
+	padding: 20px;
+	color: #c923d1;
+	font-family: bold;
+	text-align: center;
+	background: transparent;
+}
+.content div[class="mensaje"]{
+	color: #69ddbd;
+	text-align: center;
+	font-size: 100px;
+
+}
+.not{
+	color: black;
+	font-size: 80px;
+}
+.msm{
+	text-align: center;
+	color: #fff;
+}
+footer{
+	display: none;
+	text-align: center;
+	color: purple;
+}
