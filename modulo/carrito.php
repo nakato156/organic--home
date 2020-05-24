@@ -104,6 +104,13 @@ while($r = mysqli_fetch_array($q)) {
 			<td>
 				<a href="?p=carrito&elimiar=<?=$r['id']?>" ><i class="icon-close" title="elimiar"></i></a>
 					<a onclick="modificar('<?=$r['id']?>')" href="#"><i class="icon-edit" title="modificar cantidad del carrito"></i></a>
+				<?php	
+				if ($r2['descargable'] !="") {
+					?>
+					<a href="./ebook/<?=$r2['descargable']?>" download class="icon-check"></a>
+					<?php
+					}
+					?>
 			</td>
 		</tr>
 	<?php	
