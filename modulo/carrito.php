@@ -107,7 +107,7 @@ while($r = mysqli_fetch_array($q)) {
 				<?php	
 				if ($r2['descargable'] !="") {
 					?>
-					<a href="./ebook/<?=$r2['descargable']?>" download class="icon-check"></a>
+					<a href="./ebook/<?=$r2['descargable']?>" download class="icon-download"></a>
 					<?php
 					}
 					?>

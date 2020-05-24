@@ -11,7 +11,7 @@ check_admin();
  	$oferta = clear($oferta);
 
  	$imagen = "";
-        // $descargable = " ";
+    $descargable = " ";
  	// cargar img del producto
  	if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
  		# code...
@@ -20,7 +20,7 @@ check_admin();
  	}
  	// cargar archivo virtual
          	if (is_uploaded_file($_FILES['descargable']['tmp_name'])) {
-         		$descargable = $descargable.rand(0,1000).$_FILES['descargable']['name'];
+         		$descargable =$descargable.rand(0,1000).$_FILES['descargable']['name'];
          		move_uploaded_file($_FILES['descargable']['tmp_name'], "./ebook/".$descargable);
          	}
  	mysqli_query($mysqli, "INSERT INTO productos (name,precio,imagen,id_categoria,oferta,descargable) VALUES ('$name','$precio','$imagen','$categoria','$oferta','$descargable')");
