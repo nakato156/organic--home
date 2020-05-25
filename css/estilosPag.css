@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
 body{
 	/*background:#78edc3;*/
 	margin: 0;
@@ -186,4 +188,27 @@ body{
 	font-size: 16px;
 	font-weight: bold;
 	}
+}
+/*----------------------------------------pagina principal----------------------------------------*/
+.fondoh{
+	background: #aee076;
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+
+}
+.imgoh{
+	width: 200px;
+	height: 200px;
+	transform: translateY(5px);
+}
+span{
+	width: 100px;
+	font-size: 28px;
+	font-family: 'Comic Neue', cursive;
+}
+.icon-blog{
+	font-size: 40px;
+	color: #504c44;
+	cursor: pointer;
 }
