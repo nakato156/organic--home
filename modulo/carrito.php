@@ -13,30 +13,6 @@ if (isset($id) && isset($modificar)) {
 	alert("cantidad modificada");
 	redir('?p=carrito');
 }
-if (isset($finalizar)) {
-
-	$monto = clear($monto_total);
-
-	$id_cliente = clear($_SESSION['id_cliente']);
-	$q = mysqli_query($mysqli,"INSERT INTO compra (id_cliente,fecha,monto,estado) VALUES ('$id_cliente',NOW(),'$monto',0)");
-	$sc = mysqli_query($mysqli, "SELECT * FROM compra WHERE id_cliente ='$id_cliente' ORDER BY id DESC LIMIT 1");
-	$rc = mysqli_fetch_array($sc);
-
-	$ultima_compra = $rc['id'];
-
-	$q2 = mysqli_query($mysqli,"SELECT * FROM carro WHERE id_cliente = '$id_cliente'");
-	while ($r2=mysqli_fetch_array($q2)) {
-		$sp = mysqli_query($mysqli,"SELECT * FROM productos WHERE id = '".$r2['id_producto']."'");
-		$rp = mysqli_fetch_array($sp);
-
-		$monto = $rp['precio'];
-
-		mysqli_query($mysqli,"INSERT productos_compra (id_compra,id_producto,cantidad,monto ) VALUES ('$ultima_compra','".$r2['id_producto']."','".$r2['cant']."','$monto')");
-	}
-	mysqli_query($mysqli,"DELETE FROM carro WHERE id_cliente = '$id_cliente'");
-	alert("Se ha finalizado la compra");
-	redir("?=principal");
-}
 
 ?>
 
@@ -102,12 +78,13 @@ while($r = mysqli_fetch_array($q)) {
 			</td>
 			<td><?=$pTotal?><?=$divisa?></td>
 			<td>
-				<a href="?p=carrito&elimiar=<?=$r['id']?>" ><i class="icon-close" title="elimiar"></i></a>
+				<a href="?p=carrito&elimiar=<?=$r['id']?>" ><i class="icon-close" title="eliminar"></i></a>
 					<a onclick="modificar('<?=$r['id']?>')" href="#"><i class="icon-edit" title="modificar cantidad del carrito"></i></a>
 				<?php	
 				if ($r2['descargable'] !="") {
 					?>
 					<a href="./ebook/<?=$r2['descargable']?>" download class="icon-download"></a>
+					<a href="./ebook/<?=$r2['descargable']?>" download><i class="icon-download"></i></a>
 					<?php
 					}
 					?>
@@ -121,7 +98,7 @@ while($r = mysqli_fetch_array($q)) {
 <br>
 <form method="post" action="">
 	<input type="hidden" name="monto_total" value="<?=$monto_total?>">
-	<button class="btn btn-primary" type="submit" name="finalizar">Finalizar compra</button>
+	<button class="btn btn-primary" type="submit" href="?p=pagar"><a style="color: #fff; text-decoration: none;" href="?p=pagar">Finalizar compra</a></button>
 </form>
 <script type="text/javascript">
 	function modificar(idc) {

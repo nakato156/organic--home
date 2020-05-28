@@ -66,7 +66,8 @@ if(!isset($p)) {
 		if(file_exists("modulo/".$p.".php")) {
 				include "modulo/".$p.".php";
 			}else{
-				echo "<i>No se ha encontrado el modulo <b>".$p."</b> <a href='./'>Regresar</a></i>";
+				include "404.php";
+				echo "<a href='./'>Regresar</a></i>";
 			}
 		?>
 	</div>
