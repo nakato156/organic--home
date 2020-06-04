@@ -113,7 +113,7 @@ body{
 	color: #0a0;
 }
 /*-------------------------------------------------estilos responsive-------------------------------------------------*/
-@media(min-width:480px){
+@media(max-width:590px){
 .datos{
 	color: #fff;
 	font-size: 15px;
@@ -157,7 +157,7 @@ body{
 	font-weight: bold;
 	}
 }
-@media(min-width:768px){
+@media(max-width:900px){
 .cuerpo{
 	padding: 20px;
 	min-height: 400px;
@@ -204,8 +204,8 @@ body{
 }
 span{
 	width: 100px;
-	font-size: 28px;
-	font-family: 'Comic Neue', cursive;
+	/*font-size: 28px;*/
+	/*font-family: 'Comic Neue', cursive;*/
 }
 .icon-blog{
 	font-size: 40px;

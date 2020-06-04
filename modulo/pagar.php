@@ -41,7 +41,10 @@ if (isset($finalizar)) {
 	$monto = clear($monto_total);
 
 	$id_cliente = clear($_SESSION['id_cliente']);
-	$q = mysqli_query($mysqli,"INSERT INTO compra (id_cliente,fecha,monto,estado) VALUES ('$id_cliente',NOW(),'$monto',0)");
+
+	$q = mysqli_query($mysqli,"INSERT INTO compra (id_cliente,receptor,lugar,fecha,monto,estado) VALUES ('$id_cliente','$nombre','$direccion',NOW(),'$monto_total',0)");
+
+	//seoecionar el id del cliente
 	$sc = mysqli_query($mysqli, "SELECT * FROM compra WHERE id_cliente ='$id_cliente' ORDER BY id DESC LIMIT 1");
 	$rc = mysqli_fetch_array($sc);
 
@@ -54,7 +57,9 @@ if (isset($finalizar)) {
 
 		$monto = $rp['precio'];
 
-		mysqli_query($mysqli,"INSERT productos_compra (id_compra,id_producto,cantidad,monto ) VALUES ('$ultima_compra','".$r2['id_producto']."','".$r2['cant']."','$monto')");
+		mysqli_query($mysqli,"INSERT INTO productos_compra (id_compra,id_producto,cantidad,monto ) VALUES ('$ultima_compra','".$r2['id_producto']."','".$r2['cant']."','$monto')");
+
+
 	}
 	mysqli_query($mysqli,"DELETE FROM carro WHERE id_cliente = '$id_cliente'");
 	alert("Se ha finalizado la compra");
