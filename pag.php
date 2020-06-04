@@ -32,46 +32,51 @@ if(!isset($p)) {
 		<a href="?p=productos">Productos</a>
 		<a href="?p=ofertas">Ofertas</a>
 		
-	<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
+		<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
 		<?php
-			if(isset($_SESSION['id_cliente'])){
-		?>
-<!-- agregado -->
-		<a href="?p=carrito">Carrito</a> 
-<!-- pero si es admin tambien mostrar lo sgt-->
-	<div class="carrito">
-<!-- y si solo es usuario mostrar lo sgt -->
-	<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
+		if(isset($_SESSION['id_cliente'])){
+			?>
+			<!-- agregado -->
+			<a href="?p=carrito">Carrito</a> 
+			<!-- pero si es admin tambien mostrar lo sgt-->
+			<div class="carrito">
+				<!-- y si solo es usuario mostrar lo sgt -->
+				<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
 
-		<a class="nombre" href="#"><?=nombre_cliente($_SESSION['id_cliente'])?></a>
-		<a href="?p=salir">Salir</a>
-	</div>
-		<?php
-			}
+				<a class="nombre" href="#"><?=nombre_cliente($_SESSION['id_cliente'])?></a>
+				<a href="?p=salir">Salir</a>
+			</div>
+			<?php
+		}
 		?>	
-	<!--Mostrar el menu de agregar solo si es un administrador-->
+		<!--Mostrar el menu de agregar solo si es un administrador-->
 		<?php
-			if(isset($_SESSION['id'])){
-		?>
-		<a href="?p=$cambiar_1admin(P)">agregar</a>
-		<a style="float: right;" href="?p=salir">Salir</a>
-		<a class="nombre" style="float: right;" href="#"><?=nombre_cliente($_SESSION['id'])?></a> 
-		<?php
-			}
+		if(isset($_SESSION['id'])){
+			?>
+			<a href="?p=$cambiar_1admin(P)">agregar</a>
+			<a style="float: right;" href="?p=salir">Salir</a>
+			<a class="nombre" style="float: right;" href="#"><?=nombre_cliente($_SESSION['id'])?></a> 
+			<?php
+		}
 		?>
 	</div>
 
 	<div class="cuerpo">
 		<?php
 		if(file_exists("modulo/".$p.".php")) {
-				include "modulo/".$p.".php";
-			}else{
-				include "404.php";
-				echo "<a href='./'>Regresar</a></i>";
-			}
+			include "modulo/".$p.".php";
+		}else{
+			include "404.php";
+			echo "<a href='./'>Regresar</a></i>";
+		}
 		?>
 	</div>
 	<footer class="footer">
+		
+		<div class="redes">
+			<a herf="organic--home.blogspot.com" class="icon-blog"></a>
+		</div>
+
 		Todos los derechos reservados-Copyright &copy; <?=date("Y")?>
 	</footer>
 </body>

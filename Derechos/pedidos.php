@@ -81,7 +81,7 @@ if(isset($_SESSION['id_cliente'])) {
 					<td><?=$nmpf?><td>
 					<td><?=$lg?></td>
 					<td><?=$monto?></td>
-					<td><a href="?p=pedidos&eliminar=<?=$rc['id']?>">c</a></td>
+					<td><a href="?p=pedidos&eliminar=<?=$rc['id']?>">complete</a></td>
 				</tr>
 		<?php 
 		date_default_timezone_set('America/Mexico_City');
