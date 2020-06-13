@@ -17,7 +17,6 @@ if(!isset($p)) {
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
 	<script type="text/javascript" href="bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" href="styles.css">
 	<title>Organic Home</title>
 	<link rel="icon" type="image/jpg" href="img/ohicon1.png">
