@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+[alt='www.000webhost.com']{
+	display:none;
+}
 body{
 	/*background:#78edc3;*/
 	margin: 0;
@@ -7,6 +10,9 @@ body{
 }
 *{
 	font-family: arial;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 .header{
 	background: #aee076;
@@ -55,9 +61,10 @@ body{
 	text-decoration: none;
 }
 .cuerpo{
+	height: 100%;
 	background: #eaeaea;
 	padding: 30px;
-	min-height: 383px;
+	/*min-height: 383px;*/
 }
 .footer{
 	color: #fff;
@@ -111,109 +118,6 @@ body{
 }
 .textG{
 	color: #0a0;
-}
-/*-------------------------------------------------estilos responsive-------------------------------------------------*/
-@media(max-width:590px){
-	.datos{
-		color: #fff;
-		font-size: 15px;
-		text-decoration: none;
-	}
-	.user{	
-		font-size: 19px;
-	}
-	.cuerpo{
-		background: #eaeaea;
-		padding: 30px;
-		min-height: 500px;
-	}
-	.menu a{
-		font-size: 13px;
-		padding: 2px;
-	}
-	.footer{
-		font-size: 16px;
-		padding: 40px;
-	}
-	.centrarLogin{
-		width: 400px;
-		padding-top: 100px;
-	}
-	.producto{
-		display: inline-block;
-		width: 180px;
-		padding: 10px;
-		background: rgb(0,0,0,0.05);
-		color: #333;
-		margin: 2px;
-	}
-	.img_producto{
-		width: 160px;
-		height: 160px;
-	}
-	.name_producto{
-		padding: 5px;
-		font-size: 13px;
-		font-weight: bold;
-	}
-	.myv{
-		height: 300px;
-		width: 100%;
-	}
-	.vision{
-		height: 250px;
-		width: 40%;
-	}
-	.mision{
-		height: 250px;
-		width: 40%;
-	}
-}
-@media(max-width:900px){
-	.cuerpo{
-		padding: 20px;
-		min-height: 400px;
-	}
-	.menu a{
-		font-size: 15px;
-		padding: 2px;
-	}
-	.footer{
-		font-size: 13px;
-		padding: 40px;
-	}
-	.centrarLogin{
-		width: 450px;
-		padding-top: 100px;
-	}
-	.producto{
-		display: inline-block;
-		width: 200px;
-		margin: 5px;
-	}
-	.img_producto{
-		width: 180px;
-		height: 180px;
-	}
-	.name_producto{
-		padding: 5px;
-		font-size: 16px;
-		font-weight: bold;
-	}
-	.myv{
-		height: 300px;
-		width: 100%;
-	}
-	.vision{
-		height: 100%;
-		width: 40%;
-		font-size: 8px;
-	}
-	.mision{
-		height: 100%;
-		width: 40%;
-		font-size: 8px;
-	}
 }
 /*----------------------------------------pagina principal----------------------------------------*/
 .fondoh{
@@ -278,3 +182,109 @@ body{
 	box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
 	margin: auto;
 }
+/*-------------------------------------------------estilos responsive-------------------------------------------------*/
+/*@media(min-width:500px){
+	.cuerpo{
+		padding: 20px;
+		height: 90vh;
+	}
+	.menu a{
+		font-size: 15px;
+		padding: 2px;
+	}
+	.footer{
+		font-size: 13px;
+		padding: 40px;
+	}
+	.centrarLogin{
+		width: 450px;
+		padding-top: 100px;
+	}
+	.producto{
+		display: inline-block;
+		width: 300px;
+		margin: 10px 5px;
+	}
+	.img_producto{
+		width: 280px;
+		height: 190px;
+	}
+	.name_producto{
+		padding: 5px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.myv{
+		padding: 60px 0;
+		height: 200px;
+		width: 100%;
+	}
+	.vision{
+		height: 100%;
+		width: 80%;
+		font-size: 20px;
+	}
+	.mision{
+		height: 100%;
+		width: 40%;
+		font-size: 18px;
+	}
+}*/
+
+/*@media(min-width:900px){
+	.datos{
+		color: #fff;
+		font-size: 15px;
+		text-decoration: none;
+	}
+	.user{	
+		font-size: 19px;
+	}
+	.cuerpo{
+		background: #eaeaea;
+		padding: 030px;
+		height: 99vh;
+	}
+	.menu a{
+		font-size: 13px;
+		padding: 2px;
+	}
+	.footer{
+		font-size: 16px;
+		padding: 40px;
+	}
+	.centrarLogin{
+		width: 400px;
+		padding-top: 100px;
+	}
+	.producto{
+		display: inline-block;
+		width: 180px;
+		padding: 010px;
+		background: rgb(0,0,0,0.05);
+		color: #333;
+		margin: 2px;
+	}
+	.img_producto{
+		width: 160px;
+		height: 160px;
+	}
+	.name_producto{
+		padding: 5px;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	.myv{
+		height: 300px;
+		width: 100%;
+	}
+	.vision{
+		height: 250px;
+		width: 40%;
+	}
+	.mision{
+		height: 250px;
+		width: 40%;
+	}
+}
+*/

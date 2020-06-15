@@ -26,8 +26,7 @@ if (isset($agregar) && isset($cant)) {
 		$q=mysqli_query($mysqli,"INSERT INTO carro (id_cliente,id_producto,cant) VALUES ($id_cliente,$idp,$cant)");
 	}
 
-	alert("Producto agregado al carro");
-	redir("?p=productos");
+	alert(1,"Producto agregado al carro",1,"productos");
 }
 // busquedad y filtrar por categoria
 if (isset($busq) && ($cat) == ""){

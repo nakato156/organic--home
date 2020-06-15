@@ -16,14 +16,17 @@ if (isset($enviar)) {
 	if ($q->num_rows >0) { //verificar si existe el usuario
 		$r = mysqli_fetch_array($q);
 		$_SESSION['id_cliente'] = $r['id'];
+		
 		if(isset($return)){
-			redir("?p=".$return);
+			alert(9,"Bienvenido ".$r['username']." a Organic Home",1,"productos");
+			die();
 		}else{
-			redir("?p=productos");
+			alert(9,"Bienvenido ".$r['username']." a Organic Home",1,"productos");
+			die();
 		}
 	}else{ //si no existe el usuario manda una alerta
-		alert("los datos son incorrectos");
-		redir("?p=login");
+		alert(0,"los datos son incorrectos",0,"login");
+		die();
 	}
 
 }

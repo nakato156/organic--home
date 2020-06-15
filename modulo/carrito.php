@@ -5,13 +5,13 @@ $mysqli = mysqli_connect($host_mysql, $user_mysql,$pass_mysql,$bd_mysql);
 if (isset($elimiar)) {
 	$elimiar = clear($elimiar);
 	mysqli_query($mysqli,"DELETE FROM carro WHERE id = '$elimiar'");
-	redir('?p=carrito');
+	alert(1,"El producto se ha eliminado",0,"carrito");
+	// redir('?p=carrito');
 }
 if (isset($id) && isset($modificar)) {
 	$id = clear($id);
 	mysqli_query($mysqli,"UPDATE carro SET cant = '$modificar' WHERE id = '$id'");
-	alert("cantidad modificada");
-	redir('?p=carrito');
+	alert(1,"cantidad modificada",1,"carrito");
 }
 
 ?>

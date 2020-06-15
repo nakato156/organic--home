@@ -62,8 +62,7 @@ if (isset($finalizar)) {
 
 	}
 	mysqli_query($mysqli,"DELETE FROM carro WHERE id_cliente = '$id_cliente'");
-	alert("Se ha finalizado la compra");
-		// redir("?=productos");
+	alert(1,"Se ha finalizado la compra",1,"productos");
 }
 
 $id_cliente = clear($_SESSION['id_cliente']);

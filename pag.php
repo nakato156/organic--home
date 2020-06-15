@@ -19,6 +19,7 @@ if(!isset($p)) {
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<link rel="stylesheet" href="styles.css">
 	<title>Organic Home</title>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<link rel="icon" type="image/jpg" href="img/ohicon1.png">
 </head>
 <body>
@@ -60,7 +61,7 @@ if(!isset($p)) {
 		?>
 	</div>
 
-	<div class="cuerpo">
+	<section class="cuerpo">
 		<?php
 		if(file_exists("modulo/".$p.".php")) {
 			include "modulo/".$p.".php";
@@ -69,11 +70,11 @@ if(!isset($p)) {
 			echo "<a href='./'>Regresar</a></i>";
 		}
 		?>
-	</div>
+	</section>
 	<footer class="footer">
 		
 		<div class="redes">
-			<a herf="organic--home.blogspot.com" class="icon-blog"></a>
+			<a class="icon-blog" herf="https://organic--home.blogspot.com"></a>
 		</div>
 
 		Todos los derechos reservados-Copyright &copy; <?=date("Y")?>
