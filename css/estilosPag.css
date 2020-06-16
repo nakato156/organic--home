@@ -14,7 +14,7 @@ body{
 	padding: 0;
 	box-sizing: border-box;
 }
-.header{
+.header h1{
 	background: #aee076;
 	color: #fff;
 	padding: 25px;
@@ -183,14 +183,13 @@ body{
 	margin: auto;
 }
 /*-------------------------------------------------estilos responsive-------------------------------------------------*/
-/*@media(min-width:500px){
-	.cuerpo{
-		padding: 20px;
-		height: 90vh;
-	}
+@media(min-width:480px){
 	.menu a{
 		font-size: 15px;
 		padding: 2px;
+	}
+	.cuerpo{
+		height: 98vh;
 	}
 	.footer{
 		font-size: 13px;
@@ -220,18 +219,19 @@ body{
 		width: 100%;
 	}
 	.vision{
-		height: 100%;
-		width: 80%;
-		font-size: 20px;
-	}
-	.mision{
-		height: 100%;
+		height: 300px;
 		width: 40%;
 		font-size: 18px;
 	}
-}*/
+	.mision{
+		background: #fba919;
+		height: 300px;
+		width: 40%;
+		font-size: 18px;
+	}
+}
 
-/*@media(min-width:900px){
+@media(min-width:1024px){
 	.datos{
 		color: #fff;
 		font-size: 15px;
@@ -240,34 +240,30 @@ body{
 	.user{	
 		font-size: 19px;
 	}
-	.cuerpo{
-		background: #eaeaea;
-		padding: 030px;
-		height: 99vh;
-	}
 	.menu a{
-		font-size: 13px;
+		font-size: 18px;
 		padding: 2px;
+	}
+	.cuerpo{
+		height: 100%;
+	}
+	.producto{
+		display: inline-block;
+		width: 220px;
+		margin: 10px 5px;
 	}
 	.footer{
 		font-size: 16px;
-		padding: 40px;
+		padding: 40px 0;
 	}
 	.centrarLogin{
 		width: 400px;
 		padding-top: 100px;
 	}
-	.producto{
-		display: inline-block;
-		width: 180px;
-		padding: 010px;
-		background: rgb(0,0,0,0.05);
-		color: #333;
-		margin: 2px;
-	}
 	.img_producto{
-		width: 160px;
-		height: 160px;
+		text-align: center;
+		width: 200px;
+		height: 180px;
 	}
 	.name_producto{
 		padding: 5px;
@@ -275,16 +271,18 @@ body{
 		font-weight: bold;
 	}
 	.myv{
+		padding: 0px;
 		height: 300px;
 		width: 100%;
 	}
 	.vision{
-		height: 250px;
+		background: #000;
+		height: 243px;
 		width: 40%;
 	}
 	.mision{
-		height: 250px;
+		font-size: 17.5px;
+		height: 243px;
 		width: 40%;
 	}
 }
-*/

@@ -12,6 +12,7 @@ if(!isset($p)) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<meta title="Organic Home">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/estilosPag.css">
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
@@ -24,19 +25,21 @@ if(!isset($p)) {
 </head>
 <body>
 	<div class="header">
-		Organic Home	
+		<h1 class="h1">Organic Home</h1>	
 	</div>
 
 	<div class="menu" style="">
 		<a href="?p=principal">Principal</a>
 		<a href="?p=productos">Productos</a>
 		<a href="?p=ofertas">Ofertas</a>
-		
-		<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
+		<?php
+		 // Mostrar el nombre y el menu de salir solo si se ha iniciado sesion 
+		?>
 		<?php
 		if(isset($_SESSION['id_cliente'])){
+			
+			// agregado
 			?>
-			<!-- agregado -->
 			<a href="?p=carrito">Carrito</a> 
 			<!-- pero si es admin tambien mostrar lo sgt-->
 			<div class="carrito">
@@ -71,13 +74,11 @@ if(!isset($p)) {
 		}
 		?>
 	</section>
-	<footer class="footer">
-		
+	<footer class="footer">	
 		<div class="redes">
-			<a class="icon-blog" herf="https://organic--home.blogspot.com"></a>
+			<a class="icon-blog" rel="nofollow" herf="https://organic--home.blogspot.com" target="_blank"></a>
 		</div>
-
-		Todos los derechos reservados-Copyright &copy; <?=date("Y")?>
+		<p>Todos los derechos reservados-Copyright &copy; <?=date("Y")?></p>
 	</footer>
 </body>
 </html>
