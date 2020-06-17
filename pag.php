@@ -27,43 +27,43 @@ if(!isset($p)) {
 	<div class="header">
 		<h1 class="h1">Organic Home</h1>	
 	</div>
-
-	<div class="menu" style="">
-		<a href="?p=principal">Principal</a>
-		<a href="?p=productos">Productos</a>
-		<a href="?p=ofertas">Ofertas</a>
-		<?php
+	<nav>
+		<div class="menu" style="">
+			<a href="?p=principal">Principal</a>
+			<a href="?p=productos">Productos</a>
+			<a href="?p=ofertas">Ofertas</a>
+			<?php
 		 // Mostrar el nombre y el menu de salir solo si se ha iniciado sesion 
-		?>
-		<?php
-		if(isset($_SESSION['id_cliente'])){
-			
+			?>
+			<?php
+			if(isset($_SESSION['id_cliente'])){
+				
 			// agregado
-			?>
-			<a href="?p=carrito">Carrito</a> 
-			<!-- pero si es admin tambien mostrar lo sgt-->
-			<div class="carrito">
-				<!-- y si solo es usuario mostrar lo sgt -->
-				<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
+				?>
+				<a href="?p=carrito">Carrito</a> 
+				<!-- pero si es admin tambien mostrar lo sgt-->
+				<div class="carrito">
+					<!-- y si solo es usuario mostrar lo sgt -->
+					<!-- Mostrar el nombre y el menu de salir solo si se ha iniciado sesion -->
 
-				<a class="nombre" href="#"><?=nombre_cliente($_SESSION['id_cliente'])?></a>
-				<a href="?p=salir">Salir</a>
-			</div>
+					<a class="nombre" href="#"><?=nombre_cliente($_SESSION['id_cliente'])?></a>
+					<a href="?p=salir">Salir</a>
+				</div>
+				<?php
+			}
+			?>	
+			<!--Mostrar el menu de agregar solo si es un administrador-->
 			<?php
-		}
-		?>	
-		<!--Mostrar el menu de agregar solo si es un administrador-->
-		<?php
-		if(isset($_SESSION['id'])){
+			if(isset($_SESSION['id'])){
+				?>
+				<a href="?p=$cambiar_1admin(P)">agregar</a>
+				<a style="float: right;" href="?p=salir">Salir</a>
+				<a class="nombre" style="float: right;" href="#"><?=nombre_cliente($_SESSION['id'])?></a> 
+				<?php
+			}
 			?>
-			<a href="?p=$cambiar_1admin(P)">agregar</a>
-			<a style="float: right;" href="?p=salir">Salir</a>
-			<a class="nombre" style="float: right;" href="#"><?=nombre_cliente($_SESSION['id'])?></a> 
-			<?php
-		}
-		?>
-	</div>
-
+		</div>
+	</nav>
 	<section class="cuerpo">
 		<?php
 		if(file_exists("modulo/".$p.".php")) {

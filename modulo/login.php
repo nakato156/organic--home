@@ -36,18 +36,18 @@ if (isset($enviar)) {
 	<center>
 		<form method="post" action="">
 			<div class="centrarLogin">
-				<label><h2><i class="fa fa-key"></i>Iniciar sesion</h2></label>
+				<label><h2 class="is"><i class="fa fa-key"></i>Iniciar sesion</h2></label>
 				<div class="form">
-					<input type="text" class="form-control" placeholder="Usuario" name="username"/>		
+					<input type="text" class="form-control ingres" placeholder="Usuario" name="username"/>		
 				</div>
 				<div class="form">
-					<input type="password" class="form-control" placeholder="Contraseña" name="password"/>
+					<input type="password" class="form-control ingres" placeholder="Contraseña" name="password"/>
 				</div>
 				<div class="form">
 					<button class="btn" name="enviar" type="submit"><i class="sing"></i>ingresar</button>
 				</div>
 				<div class="form">
-					<a href="?p=registro">Registrate</a>
+					<a class="reg" href="?p=registro">Registrate</a>
 				</div>
 			</div>	
 		</form>
