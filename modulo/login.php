@@ -4,8 +4,8 @@ if(isset($_SESSION['id_cliente'])) {
 }
 
 if (isset($enviar)) {
-	$username = clear($username);
-	$password = clear($password);
+	$username = mysqli_real_escape_string($mysqli, clear($username));
+	$password = mysqli_real_escape_string($mysqli, clear($password));
 	
 	//variable de la base de datos
 	$mysqli = mysqli_connect($host_mysql, $user_mysql,$pass_mysql,$bd_mysql);
