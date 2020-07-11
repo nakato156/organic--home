@@ -24,12 +24,36 @@ function redir($var){
 	<?php
 	die();
 }
-function alert($var){
-	?>
-	<script type="text/javascript">
-		alert("<?=$var?>");
-	</script>
-	<?php
+function alert($tit,$txt,$type,$url){
+	// titulos
+	if ($tit == 0) {
+		$title = "Error";
+	}elseif ($tit == 1) {
+		$title = "Bien";
+	}elseif ($tit == 2) {
+		$title = "Informacion";
+	}elseif ($tit == 9) {
+		$title = "Hola";
+	}else{
+		$title ="Informacion";
+	}
+	// tipos
+	if ($type == 0) {
+		$t = "error";
+	}elseif ($type == 1) {
+		$t = "success";
+	}elseif ($type == 2) {
+		$t = "info";
+	}else{
+		$t = "info";
+	}
+	echo '<script> swal({
+		title: "'.$title.'!",
+		text: "'.$txt.'",
+		icon: "'.$t.'",
+	});';
+	echo '$(".swal-button").click(function(){window.location="?p='.$url.'";});';
+	echo '</script>';
 }
 function check_user($url){
 	if (!isset($_SESSION['id_cliente'])) {
@@ -71,17 +95,17 @@ function fecha($fecha){
 	return $day."/".$month."/".$year." ".$hour.":".$mins;
 }
 function estado($id_estado){
-		if ($id_estado == 0){
-			$estado = "Iniciado";
-		}elseif ($id_estado == 1){
-			$estado = "Preparando";
-		}elseif ($id_estado == 2){
-			$estado = "En camino";
-		}elseif ($id_estado == 3){
-			$estado = "Listo";
-		}else{
-			$estado = "Indefinido";
-		}
-		return $estado;
+	if ($id_estado == 0){
+		$estado = "Iniciado";
+	}elseif ($id_estado == 1){
+		$estado = "Preparando";
+	}elseif ($id_estado == 2){
+		$estado = "En camino";
+	}elseif ($id_estado == 3){
+		$estado = "Listo";
+	}else{
+		$estado = "Indefinido";
+	}
+	return $estado;
 }
 ?>

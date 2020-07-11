@@ -14,6 +14,7 @@ if (isset($enviar)) {
 
 	//consulta a la base de datos
 	$q = mysqli_query( $mysqli,"INSERT INTO cliente (username,password,telf,email) VALUES ('$username','$password','$telefono','$email')");
+	alert(1,"Te has registrado exitosamente",1,"productos");
 }
 	?>
 	<center>

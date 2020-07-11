@@ -59,3 +59,24 @@
 .icon-eye:before {
   content: "\67";
 }
+.icon-download:before {
+  content: "\68";
+}
+.icon-bar:before {
+  content: "\69";
+}
+.icon-facebook:before {
+  content: "\6a";
+}
+.icon-twitter:before {
+  content: "\6b";
+}
+.icon-cog:before {
+  content: "\6c";
+}
+.icon-user:before {
+  content: "\6d";
+}
+.icon-commenting:before {
+  content: "\6e";
+}
